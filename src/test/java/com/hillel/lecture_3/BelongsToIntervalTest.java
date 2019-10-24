@@ -21,7 +21,7 @@ public class BelongsToIntervalTest {
     @DataProvider(name = "numbersProvider")
     public static Object[][] numbersProvider() {
         return new Object[][] {
-                { -5, 3, 5, "Number 5 belong to interval [-5;3]"},
+                { -5, 3, -1, "Number -1 belong to interval [-5;3]"},
                 { -5, 3, 3, "Number 3 belong to interval [-5;3]"},
                 { -5, 3, 6, "Number 6 not belong to interval [-5;3]" },
                 { -5, 3, 4, "Number 4 not belong to interval [-5;3]" }

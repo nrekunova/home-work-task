@@ -58,14 +58,14 @@ public class ConverterTestTask {
 
     @Test
     public void kilogramsToPoundsTest() {
-        double expectedResult = 4.535970244035199;
+        double expectedResult = 22.0462;
         assertEquals(weightConverter.kilogramsToPounds(10), expectedResult);
     }
 
     @Test
     public void poundsToKilogramsTest() {
-        double expectedResult = 22.046;
-        assertEquals(weightConverter.poundsToKilograms(10), expectedResult);
+        double expectedResult = 11.339925610087997;
+        assertEquals(weightConverter.poundsToKilograms(25), expectedResult);
     }
 
     @Test

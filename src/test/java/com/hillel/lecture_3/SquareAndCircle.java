@@ -35,7 +35,7 @@ public class SquareAndCircle {
         double circleArea = 12;
         double squareArea = 6;
 
-        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is in the square") ;
+        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is in the circle") ;
     }
 
     @Test
@@ -43,7 +43,7 @@ public class SquareAndCircle {
         double circleArea = 9;
         double squareArea = 6;
 
-        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the square") ;
+        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the circle") ;
     }
 
     @Test
@@ -52,7 +52,7 @@ public class SquareAndCircle {
         double squareArea = 19;
 
         assertEquals(squareAndCircleChecker.checkCircleInSquare(circleArea, squareArea), "The circle is not in the square") ;
-        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the square") ;
+        assertEquals(squareAndCircleChecker.checkSquareInCircle(circleArea, squareArea), "The square is not in the circle") ;
     }
 
 }

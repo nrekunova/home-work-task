@@ -23,8 +23,8 @@ public class TriangleTest {
         return new Object[][] {
                 { 5, 5, 10, "Isosceles triangle!"},
                 { 5, 3, 10, "No isosceles triangle!"},
-                { 5, 3, 5, "Isosceles triangle"},
-                { 5, 4, 4, "Isosceles triangle"},
+                { 5, 3, 5, "Isosceles triangle!"},
+                { 5, 4, 4, "Isosceles triangle!"},
                 { 9, 4, 5, "No isosceles triangle!"},
         };
     }

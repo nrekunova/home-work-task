@@ -4,7 +4,7 @@
 
     <test name="All tests">
         <packages>
-            <package name="com.hillel.*"/>
+            <package name="com.hillel.lecture_1"/>
         </packages>
     </test>
 

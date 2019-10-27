@@ -14,7 +14,6 @@
 
     <properties>
         <aspectj.version>1.8.10</aspectj.version>
-        <allure.result.dir>1</allure.result.dir>
     </properties>
 
     <dependencies>

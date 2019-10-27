@@ -1,10 +1,10 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="!!!Changes this name!!!">
+<suite name="{FIRST_NAME LAST_NAME} suite">
 
-    <test name="Changes test name tests">
+    <test name="{FIRST_NAME} tests">
         <packages>
-            <package name="com.hillel.lecture_2"/>
+            <package name="com.hillel.*"/>
         </packages>
     </test>
 

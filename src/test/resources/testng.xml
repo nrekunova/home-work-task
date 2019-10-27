@@ -2,7 +2,7 @@
 
 <suite name="!!!Changes this name!!!">
 
-    <test name="All tests">
+    <test name="Changes test name tests">
         <packages>
             <package name="com.hillel.*"/>
         </packages>

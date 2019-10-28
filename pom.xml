@@ -13,7 +13,7 @@
     <description>Automation test for check home tasks</description>
 
     <properties>
-        <aspectj.version>1.8.10</aspectj.version>
+        <aspectj.version>1.9.4</aspectj.version>
     </properties>
 
     <dependencies>

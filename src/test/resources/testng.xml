@@ -1,8 +1,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 
-<suite name="!!!Test suite!!">
+<suite name="${userName} suite">
 
-    <test name="All tests">
+    <test name="${userName} tests">
         <packages>
             <package name="com.hillel.lecture_1"/>
         </packages>

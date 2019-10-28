@@ -1,6 +1,5 @@
 package com.hillel.conf;
 
-import org.apache.commons.lang.StringUtils;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.internal.BaseTestMethod;
@@ -16,7 +15,7 @@ public class TestListener implements ISuiteListener {
     public void onStart(ISuite suite) {
         String userName = System.getProperty("userName");
 
-        if (StringUtils.isNotBlank(userName)) {
+        if (userName != null && !userName.isEmpty()) {
             suite.getAllMethods().forEach(iTestNGMethod -> {
                 String methodName = iTestNGMethod.getMethodName();
                 try {

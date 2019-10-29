@@ -10,8 +10,11 @@ public class ReverseStringChecker {
     @Step
     public String getReversString(String value) {
 
-//        TODO implements result
-        String result = "";
+        char[] reverse = new char[value.length()];
+        for (int i = 0; i < value.length(); i++) {
+            reverse[i] = value.charAt(value.length() - (i +1));
+        }
+        String result = new String(reverse);
 
         return result;
     }

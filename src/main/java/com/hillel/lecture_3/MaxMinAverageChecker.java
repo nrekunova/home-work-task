@@ -1,10 +1,13 @@
 package com.hillel.lecture_3;
 
+import io.qameta.allure.Step;
+
 /**
  * Created by alpa on 10/22/19
  */
 public class MaxMinAverageChecker {
 
+    @Step
     public int getMaxNumber(int a, int b , int c) {
 
         int result = 0;
@@ -15,6 +18,7 @@ public class MaxMinAverageChecker {
         return result;
     }
 
+    @Step
     public int getAverageNumber(int a, int b , int c) {
 
 
@@ -33,6 +37,7 @@ public class MaxMinAverageChecker {
         return result;
     }
 
+    @Step
     public int getMinNumber(int a, int b , int c) {
 
 

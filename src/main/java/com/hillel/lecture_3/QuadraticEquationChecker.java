@@ -1,10 +1,13 @@
 package com.hillel.lecture_3;
 
+import io.qameta.allure.Step;
+
 /**
  * Created by alpa on 10/22/19
  */
 public class QuadraticEquationChecker {
 
+    @Step
     // "Two real, identical roots: [x1 && x2] = -54.0") ; - неправильный тест
     public String checkQuadraticEquation(double a, double b, double c) {
 

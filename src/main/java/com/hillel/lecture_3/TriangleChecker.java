@@ -7,9 +7,13 @@ public class TriangleChecker {
 
     public String isTriangleIsosceles(int a, int b, int c) {
 
-//        TODO implements result
+// изменения в тестовых данных, добавлен "!" в двух результатах
         String result = "";
-
+        if (a == b || b == c || a == c) {
+            result = "Isosceles triangle!";
+        } else {
+            result = "No isosceles triangle!";
+        }
         return result;
     }
 }

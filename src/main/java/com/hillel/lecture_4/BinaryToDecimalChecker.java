@@ -15,7 +15,10 @@ public class BinaryToDecimalChecker {
 
     public int fromBinaryToDecimal(int value) {
 
-//        TODO implements result
+        // 101
+        // 4+1
+        // 111 = 4 +2 +1 =7
+        // 1000 = 8
         int result = 0;
 
         return result;

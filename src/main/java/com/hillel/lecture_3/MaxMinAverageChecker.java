@@ -7,25 +7,39 @@ public class MaxMinAverageChecker {
 
     public int getMaxNumber(int a, int b , int c) {
 
-//        TODO implements result
         int result = 0;
+        if (a != b && b != c) {
+            result = Math.max(a, Math.max(b, c));
+        }
 
         return result;
     }
 
     public int getAverageNumber(int a, int b , int c) {
 
-//        TODO implements result
+
         int result = 0;
+        if (a == b && b ==c) {
+            result = 0;
+        } else if ((a < b && b < c) || (a > b && b > c)) {
+            result = b;
+        } else if ((b < a && a < c) || (b > a && a > c)) {
+            result = a;
+        } else {
+            result = c;
+        }
+
 
         return result;
     }
 
     public int getMinNumber(int a, int b , int c) {
 
-//        TODO implements result
-        int result = 0;
 
+        int result = 0;
+        if (a != b && b != c) {
+            result = Math.min(a, Math.min(b, c));
+        }
         return result;
     }
 }

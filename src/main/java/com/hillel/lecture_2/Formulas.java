@@ -9,8 +9,7 @@ public class Formulas {
 
     @Step
     public double calculate9Formula(double x) {
-        double result = 0.0;
-//        TODO implement formula 9
+        double result = 1.1 * Math.pow(Math.E,-x) + Math.abs(Math.cos(Math.sqrt(Math.PI * x))) - 3.0 / 8.0;
         return result;
     }
 

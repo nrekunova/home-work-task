@@ -14,23 +14,7 @@ public class DecimalToHexadecimalChecker {
         while (value > 0) {
             int rest = value % 16;
             value = value - rest;
-            String c = "";
-            if (rest == 10) {
-                c = "A";
-            } else if (rest == 11) {
-                c = "B";
-            } else if (rest == 12) {
-                c = "C";
-            } else if (rest == 13) {
-                c = "D";
-            } else if (rest == 14) {
-                c = "E";
-            } else if (rest == 15) {
-                c = "F";
-            } else {
-                c = String.valueOf(rest);
-            }
-            result = c + result;
+            result = getString(rest) + result;
             value = value / 16;
             i++;
         }
@@ -38,6 +22,26 @@ public class DecimalToHexadecimalChecker {
 
         return result;
     }
+
+     private String getString(int rest) {
+         String c = "";
+         if (rest == 10) {
+             c = "A";
+         } else if (rest == 11) {
+             c = "B";
+         } else if (rest == 12) {
+             c = "C";
+         } else if (rest == 13) {
+             c = "D";
+         } else if (rest == 14) {
+             c = "E";
+         } else if (rest == 15) {
+             c = "F";
+         } else {
+             c = String.valueOf(rest);
+         }
+         return c;
+     }
 
     @Step
     public int fromHexadecimalToDecimal(String value) {

@@ -1,5 +1,8 @@
 package com.hillel.lecture_3;
 
+import com.hillel.lecture_5.ArrayUtil;
+import com.hillel.lecture_5.EvenOrOddChecker;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -48,8 +51,15 @@ public class Main {
         System.out.println("a = " + a4 + ", b = " + b4);
 
 
+        EvenOrOddChecker evenOrOddChecker = new EvenOrOddChecker();
+        System.out.println("numer = " + 2 + " is even : " + evenOrOddChecker.check(2));
+        System.out.println("numer = " + 7 + " is even : " + evenOrOddChecker.check(7));
 
-
+        ArrayUtil arrayUtil = new ArrayUtil();
+        int[] argg = {1, 3, 5};
+        System.out.println("Summ of array[1, 3, 5] = " + arrayUtil.summa(argg));
+        char[] chars = {'A', 'B', 'C'};
+        System.out.println("array = " + chars + " codes = " + arrayUtil.getCodes(chars));
 
 
     }

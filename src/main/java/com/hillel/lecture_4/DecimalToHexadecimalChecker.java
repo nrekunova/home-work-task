@@ -49,24 +49,31 @@ public class DecimalToHexadecimalChecker {
         int result = 0;
         for (int i = 0; i < value.length(); i++) {
             char c = value.charAt(value.length() - (i + 1));
-            int num = 0;
-            if (c == 'A') {
-                num = 10;
-            } else if (c == 'B') {
-                num = 11;
-            } else if (c == 'C') {
-                num = 12;
-            } else if (c == 'D') {
-                num = 13;
-            } else if (c == 'E') {
-                num = 14;
-            } else if (c == 'F') {
-                num = 15;
-            } else {
-                num = Integer.valueOf(String.valueOf(c));
-            }
-            result = result + num * ((int) Math.pow(16, i));
+
+            result = result + charToInt(c) * ((int) Math.pow(16, i));
         }
         return result;
     }
+
+    public int charToInt(char c) {
+        int num = 0;
+        if (c == 'A') {
+            num = 10;
+        } else if (c == 'B') {
+            num = 11;
+        } else if (c == 'C') {
+            num = 12;
+        } else if (c == 'D') {
+            num = 13;
+        } else if (c == 'E') {
+            num = 14;
+        } else if (c == 'F') {
+            num = 15;
+        } else {
+            num = Integer.valueOf(String.valueOf(c));
+        }
+        return num;
+    }
+
+
 }

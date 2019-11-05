@@ -11,8 +11,10 @@ public class LetterRemovalChecker {
     @Step
     public String removeLetter(String sentence, String letterFoRemove) {
 
-//        TODO implements result
-        String result = "";
+        String result = sentence;
+        for (char letter:letterFoRemove.toCharArray()) {
+            result = result.replace(String.valueOf(letter), "");
+        }
 
         return result;
     }

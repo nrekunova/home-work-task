@@ -11,8 +11,12 @@ public class SquareWordPatternChecker {
     @Step
     public String applySquareWordPattern(String word) {
 
-//        TODO implements result
-        String result = "";
+        String result = word;
+        for(int i = 0; i < word.length() -1;i++){
+            result = result.concat(", ");
+            word = word.substring(1)+ word.charAt(0);
+            result += word;
+        }
 
         return result;
     }

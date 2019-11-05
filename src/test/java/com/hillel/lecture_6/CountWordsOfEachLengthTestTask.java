@@ -23,7 +23,7 @@ public class CountWordsOfEachLengthTestTask {
                 { "Winter is coming.", 6, 2},
                 { "When you play the game of thrones, you win or you die. There is no middle ground.", 3, 6},
                 { "When you play the game of thrones, you win or you die. There is no middle ground.", 7, 1},
-                { "The man who passes the sentence should swing the sword.", 6, 3},
+                { "The man who passes the sentence should swing the sword.", 5, 2},
         };
     }
 }

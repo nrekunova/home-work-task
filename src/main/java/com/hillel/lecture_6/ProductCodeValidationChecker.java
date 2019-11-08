@@ -16,9 +16,13 @@ public class ProductCodeValidationChecker {
         for (char letter: parts[0].toCharArray()) {
             if (letter >= '0' && letter <= '9') {
                 nums = nums + letter;
+            } else if (letter < 'A' || letter > 'Z') {
+                return false;
             }
         }
-
+        if (nums.length() != 6) {
+            return false;
+        }
         int n1 = Integer.valueOf(nums.substring(0, 2));
         int n2 = Integer.valueOf(nums.substring(2, 4));
         int n3 = Integer.valueOf(nums.substring(4));

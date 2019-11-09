@@ -13,6 +13,10 @@ public class ProductCodeValidationChecker {
 
         String[] parts = code.split(" ");
         String nums = "";
+        // or this check
+//        if (!parts[0].toUpperCase().equals(parts[0])) {
+//            return false;
+//        }
         for (char letter: parts[0].toCharArray()) {
             if (letter >= '0' && letter <= '9') {
                 nums = nums + letter;

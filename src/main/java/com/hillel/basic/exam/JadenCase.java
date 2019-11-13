@@ -16,8 +16,23 @@ package com.hillel.basic.exam;
  * Note that the Java version expects a return value of null for an empty string or null.
  */
 public class JadenCase {
+    public String uppFirstLatter(String word){
+        if(word == null || word.length() ==0) {
+            return word;
+        }
+        return word.substring(0,1).toUpperCase() + word.substring(1);
+    }
 
     public String toJadenCase(String phrase) {
-        return null;
+        if(phrase == null || phrase.length() ==0) {
+            return null;
+        }
+        String[] words = phrase.split(" ");
+        String result = uppFirstLatter(words[0]);
+        for (int i = 1; i < words.length; i++){
+            result = result + " " + uppFirstLatter(words[i]);
+        }
+        return result;
     }
+
 }

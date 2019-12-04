@@ -18,6 +18,6 @@ public class WhatsAppTest {
     }
     @Test
     public  void sendTextAndSmileTest(){
-        Assert.assertEquals(whatsApp.sendTextAndSmile("Test :)"), "You've got WhatsApp message with Smile 'Test :)'");
+        Assert.assertEquals(whatsApp.sendTextAndSmile("Test", Smile.HAPPY), "You've got WhatsApp message 'Test' with Smile :)");
     }
 }

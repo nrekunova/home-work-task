@@ -7,7 +7,6 @@ public class SkypeTest {
     private Skype skype = new Skype();
     @Test
     public void instanceOffTest(){
-
         Assert.assertTrue(skype instanceof ITextAndSmileMessenger, "Skype should be instanceof ITextAndSmileMessenger");
         Assert.assertTrue(skype instanceof ITextMessenger, "Skype should be instanceof ITextMessenger");
         Assert.assertTrue(skype instanceof ICallMessenger, "Skype should be instanceof ICallMessenger");
@@ -21,14 +20,14 @@ public class SkypeTest {
     }
     @Test
     public  void sendTextAndSmileTest(){
-        Assert.assertEquals(skype.sendTextAndSmile("Test :)"), "You've got Skype message with Smile 'Test :)'");
+        Assert.assertEquals(skype.sendTextAndSmile("Test", Smile.FACE_PALM), "You've got Skype message 'Test' with Smile 8<");
     }
     @Test
     public  void callTest(){
-        Assert.assertEquals(skype.call("Moscow calling"), "You've got Skype call @Moscow calling");
+        Assert.assertEquals(skype.call(Contact.ADMIN), "You've got Skype call @ADMIN");
     }
     @Test
     public  void videoCallTest(){
-        Assert.assertEquals(skype.videoCall("Moscow calling"), "You've got Skype video call @Moscow calling");
+        Assert.assertEquals(skype.videoCall(Contact.PETYA), "You've got Skype video call @PETYA");
     }
 }

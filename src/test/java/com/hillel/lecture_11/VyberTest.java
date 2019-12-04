@@ -18,6 +18,6 @@ public class VyberTest {
     }
     @Test
     public  void callTest(){
-        Assert.assertEquals(vyber.call("Moscow calling"), "You've got Vyber call @Moscow calling");
+        Assert.assertEquals(vyber.call(Contact.PETYA), "You've got Vyber call @PETYA");
     }
 }

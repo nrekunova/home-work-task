@@ -1,10 +1,18 @@
 package com.hillel.lecture_11;
 
+import com.hillel.lecture_13.ErrorAsError;
+
 public class Skype implements IVideoCallMessenger, ITextAndSmileMessenger{
 
     @Override
-    public String sendTextAndSmile(String textAndSmile) {
-        return "You've got Skype message with Smile '" + textAndSmile + "'";
+    public String sendTextAndSmile(String text, Smile smile) {
+
+        if(text.contains("throw error")){
+//            throw new ErrorAsError("it is Skype error");
+            ErrorAsError err = new ErrorAsError("it is Skype error");
+            throw err;
+        }
+        return "You've got Skype message '" + text + "' with Smile " + smile;
     }
 
     @Override
@@ -13,12 +21,12 @@ public class Skype implements IVideoCallMessenger, ITextAndSmileMessenger{
     }
 
     @Override
-    public String videoCall(String contact) {
+    public String videoCall(Contact contact) {
         return "You've got Skype video call @" + contact ;
     }
 
     @Override
-    public String call(String contact) {
+    public String call(Contact contact) {
         return "You've got Skype call @" + contact;
     }
 }

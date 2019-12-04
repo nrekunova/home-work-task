@@ -15,12 +15,12 @@ public class TelegramTest {
 
     @Test
     public void callTest() {
-        Assert.assertEquals(telegram.call("Moscow calling"), "You've got Telegram call @Moscow calling");
+        Assert.assertEquals(telegram.call(Contact.ADMIN), "You've got Telegram call @ADMIN");
     }
 
     @Test
     public void videoCallTest() {
-        Assert.assertEquals(telegram.videoCall("Moscow calling"), "You've got Telegram video call @Moscow calling");
+        Assert.assertEquals(telegram.videoCall(Contact.PETYA), "You've got Telegram video call @PETYA");
 
     }
 }

@@ -1,5 +1,5 @@
 package com.hillel.lecture_11;
 
 public interface IVideoCallMessenger extends ICallMessenger{
-    String videoCall(String contact);
+    String videoCall(Contact contact);
 }

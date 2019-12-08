@@ -19,6 +19,7 @@ public class MapsTestTask {
     @Test
     public void checkReversDataTest() {
         List<User> userList = new ArrayList<>();
+//        TODO need to create object user with all required field and add to the userList
 
         assertEquals(jsonConverter.convertUsers(userList).toString(), jsonInput);
     }

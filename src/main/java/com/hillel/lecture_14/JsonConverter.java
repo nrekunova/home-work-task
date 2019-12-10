@@ -19,17 +19,70 @@ public class JsonConverter {
 
     public String convertToJsonString(List<User> users) {
 
-//        TODO implements result
-        String result = "";
+        String result = "\"[";
+        for (int i = 0; i <  users.size();i++) {
+            if (i != 0) {
+                result += ",";
+            }
+            result += convertUserToJson(users.get(i));
+        }
+        result += "]\"";
 
         return result;
     }
 
-    public String convertToJsonString(User users) {
+    private String convertUserToJson(User user) {
+        String result = "{";
+        result += "\"id\":"+ user.getId();
+        result += ",";
+        result += "\"firstName\":\"" + user.getFirstName() + "\"";
+        result += ",";
+        result += "\"lastName\":\"" + user.getLastName() + "\"";
+        result += ",";
+        result += "\"age\":" + user.getAge();
+        result += ",";
+        result += "\"gender\":\"" + user.getGender() + "\"";
+        result += ",";
+        result += "\"company\":\"" + user.getCompany() + "\"";
+        result += ",";
+        result += "\"email\":\"" + user.getEmail() + "\"";
+        result += ",";
+        result += "\"phone\":[";
+        for (int i = 0; i <  user.getPhone().size();i++) {
+            if (i!= 0){
+                result += ",";
+            }
+            result += "\"" + user.getPhone().get(i) + "\"";
+        }
+        result += "]";
+        result += ",";
+        result += "\"address\":{\"city\":\"" + user.getAddress().getCity();
+        result += "\",\"street\":\"" + user.getAddress().getStreet() + "\"}";
+        result += ",";
+        result += "\"friends\":[";
+        for (int i = 0; i <  user.getFriends().size();i++) {
+            if (i != 0) {
+                result += ",";
+            }
+            Friend friend = user.getFriends().get(i);
+            result += "{\"id\":" + friend.getId();
+            result += ",";
+            result += "\"firstName\":\"" + friend.getFirstName() +"\"";
+            result += ",";
+            result += "\"lastName\":\"" + friend.getLastName() +"\"}";
 
-//        TODO implements result
-        String result = "";
+        }
+        result += "]";
 
+        result += "}";
+        return result;
+    }
+
+    public String convertToJsonString(User user) {
+
+        String result = "\"";
+        result += convertUserToJson(user);
+        result += "\"";
         return result;
     }
 
